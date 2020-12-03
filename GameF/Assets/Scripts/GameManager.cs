@@ -11,7 +11,14 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        Player = PrefabMgr.Load("Prefab/Item/CardItem", UIRoot.transform);
+        for (int i = 1; i < 4; i++)
+        {
+            Player = PrefabMgr.Load("Prefab/Item/CardItem", UIRoot.transform);
+
+            PrefabMgr.SetIcon(Player, "fwz_pic_mulinger");
+        }
+        
+        //Player = PrefabMgr.Load("Prefab/Item/CardItem", UIRoot.transform);
     }
 
     void Update()
